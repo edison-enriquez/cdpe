@@ -1,0 +1,19 @@
+{
+  "title": "cdpe: single-position simulator for the Collateralized Debt Position of Energy (Section 5 code)",
+  "upload_type": "software",
+  "description": "Python package, scripts, tests and a walkthrough notebook that reproduce Section 5 (validation of a single position) of 'Collateralized energy positions for community battery storage: mechanism design and assessment': the log-OU spot process, the rate-limiting oracle with a 24-hour reference price, a single collateralized position with three liquidation triggers, the eight protocol invariants, the 500-trajectory price envelope, the permanent-shock sweep and the evening-discharge collateral channel.",
+  "creators": [
+    {
+      "name": "Enríquez Ceballos, Edison Ferney",
+      "affiliation": "Universidad del Valle",
+      "orcid": "0000-0002-5577-7963"
+    }
+  ],
+  "license": "MIT",
+  "keywords": ["community energy storage", "collateralized debt position", "energy tokenization", "local electricity market", "battery storage", "protocol invariants"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/edison-enriquez/cdpe", "relation": "isSupplementTo", "resource_type": "software"}
+  ],
+  "language": "eng",
+  "access_right": "open"
+}

@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the companion article and the software itself."
+type: software
+title: "cdpe: single-position simulator for the Collateralized Debt Position of Energy"
+version: 2.0.0
+date-released: 2026-11-03
+license: MIT
+repository-code: "https://github.com/edison-enriquez/cdpe"
+authors:
+  - family-names: "Enríquez Ceballos"
+    given-names: "Edison Ferney"
+    orcid: "https://orcid.org/0000-0002-5577-7963"
+    affiliation: "School of Electrical and Electronic Engineering, Universidad del Valle, Cali, Colombia"
+keywords:
+  - community energy storage
+  - collateralized debt position
+  - energy tokenization
+  - local electricity market
+  - protocol invariants
+preferred-citation:
+  type: article
+  title: "Collateralized energy positions for community battery storage: mechanism design and assessment"
+  authors:
+    - family-names: "Enríquez Ceballos"
+      given-names: "Edison Ferney"
+      orcid: "https://orcid.org/0000-0002-5577-7963"
+    - family-names: "Nieto Londoño"
+      given-names: "Rubén Darío"
+      orcid: "https://orcid.org/0000-0002-1113-3269"
+    - family-names: "Revelo Fuelagán"
+      given-names: "Javier"
+      orcid: "https://orcid.org/0000-0002-2652-8351"
+    - family-names: "Bautista Loza"
+      given-names: "Oscar Darío"
+  journal: "Journal of Energy Storage"
+  year: 2026
+  notes: "Submitted."
