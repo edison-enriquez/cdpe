@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cdpe"
-version = "2.0.0"
+version = "2.0.1"
 description = "Single-position simulator for the Collateralized Debt Position of Energy (CDPE), Section 5 of the companion paper"
 readme = "README.md"
 requires-python = ">=3.10"

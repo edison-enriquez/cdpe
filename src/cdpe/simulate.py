@@ -102,8 +102,8 @@ def run_trajectory(seed: int, p: Params = Params(), rho0: float | None = None,
         P_c, P_d = dispatch(k, t)
         battery.step(P_c, P_d)
         vault.clamp_to_stored(battery.stored_kWh)        # I8
-        vault.accrue(p.dt_h)                             # Eq. 5
-        pr = oracle.update(t, float(spot_out[k]))        # Eqs. 2-3
+        vault.accrue(p.dt_h)                             # Eq. 6
+        pr = oracle.update(t, float(spot_out[k]))        # Eqs. 3-4
         p_ref[k] = pr
         if liq is None:
             r = vault.rho(pr)

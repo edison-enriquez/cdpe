@@ -20,7 +20,7 @@ cd cdpe
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-python scripts/run_all.py      # ~2 min: Table 2, Fig. 2, Table 3, Fig. 3 -> results/
+python scripts/run_all.py      # ~6 min: Table 2, Fig. 2, Table 3, Fig. 3, Table A.1 -> results/
 pytest                         # 27 tests, ~15 s
 jupyter notebook notebooks/section5_walkthrough.ipynb
 ```
@@ -34,17 +34,18 @@ No installation of the package is needed: the scripts and tests add `src/` to th
 src/cdpe/
   params.py      every symbol of Sections 4-5 with its value          (Params)
   price.py       log-OU spot with diurnal cycle; shock to the target   (simulate_spot)
-  oracle.py      rate-limiting breaker + 24 h TWAP, Eqs. 2-3          (Oracle, RejectingBreaker)
-  battery.py     state of charge and capacity fade, Eq. 1             (Battery)
-  vault.py       rho, alpha(SoH), debt index, liquidation, Eqs. 4-6   (Vault)
+  oracle.py      rate-limiting breaker + 24 h TWAP, Eqs. 3-4          (Oracle, RejectingBreaker)
+  battery.py     state of charge and capacity fade, Eq. 2             (Battery)
+  vault.py       rho, alpha(SoH), debt index, liquidation, Eqs. 5-7   (Vault)
   invariants.py  I1-I8 checked at every step                          (InvariantTracker)
   simulate.py    one trajectory, the batch, evening-discharge prosumer
 scripts/
   run_baseline.py      Section 5.2  -> results/baseline_*.{json,csv,npz}
   run_shock_sweep.py   Section 5.3  -> results/shock_sweep.csv
   run_discharge.py     Section 5.4  -> results/discharge_*.{csv,npz}
+  run_oracle_sweep.py  Appendix A   -> results/oracle_sweep.csv (windows 4-48 h, both leverages)
   make_figures.py      Fig. 2 (fig_envelope) and Fig. 3 (fig_collateral), PDF and PNG
-  run_all.py           the four above in order
+  run_all.py           the five above in order
 tests/                 unit tests of each equation + regression tests on the Section 5 figures
 notebooks/             section5_walkthrough.ipynb (executed), build_notebook.py (its generator)
 results/               outputs of run_all.py as committed

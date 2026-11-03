@@ -1,9 +1,9 @@
 """A single collateralized position (Sections 4.3--4.6).
 
-    rho(t)     = E_col(t) p_ref(t) / l$(t)                       (Eq. 4)
-    alpha(t)   = alpha_min / SoH(t)                              (Eq. 4)
-    phi_D(t+d) = phi_D(t) (1 + r_SF d)                           (Eq. 5)
-    E_rec      = min{ E_col, l$ (1 + beta) / p_ref }             (Eq. 6)
+    rho(t)     = E_col(t) p_ref(t) / l$(t)                       (Eq. 5)
+    alpha(t)   = alpha_min / SoH(t)                              (Eq. 5)
+    phi_D(t+d) = phi_D(t) (1 + r_SF d)                           (Eq. 6)
+    E_rec      = min{ E_col, l$ (1 + beta) / p_ref }             (Eq. 7)
 
 The position is liquidated when rho < alpha_liq.  The liquidator repays l$,
 receives E_rec, and the shortfall l$ - E_col p_ref (if positive) is bad debt

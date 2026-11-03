@@ -1,11 +1,11 @@
-"""Battery dynamics (Section 4.1, Eq. 1).
+"""Battery dynamics (Section 4.1, Eq. 2 of the manuscript).
 
     sigma(t+1) = sigma(t) + dt / C(t) * [eta_c P_c(t) - P_d(t) / eta_d]
     C(t)       = C0 [1 - delta D_thr(t) / (2 C0)]
 
 with D_thr the cumulative throughput.  On the seven-day horizons of the paper
 delta = 0, so C(t) = C0 and SoH = 1; the fade term is implemented so that the
-dynamic threshold alpha(SoH) of Eq. 4 can be exercised on longer horizons.
+dynamic threshold alpha(SoH) of Eq. 5 can be exercised on longer horizons.
 """
 
 from __future__ import annotations

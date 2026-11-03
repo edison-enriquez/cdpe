@@ -1,4 +1,4 @@
-"""Reference price oracle (Section 4.2, Eqs. 2--3).
+"""Reference price oracle (Section 4.2, Eqs. 3--4 of the manuscript).
 
 Each spot observation is admitted through a rate-limiting circuit breaker,
 
@@ -49,7 +49,7 @@ class Oracle:
         self._last, self._last_t = tilde, t_h
         return tilde
 
-    # -- Eq. 2 ---------------------------------------------------------------
+    # -- Eq. 4 ---------------------------------------------------------------
     def update(self, t_h: float, p_ws: float) -> float:
         """Admit one observation at time ``t_h`` and return p_ref(t_h)."""
         tilde = self._admit(t_h, p_ws)

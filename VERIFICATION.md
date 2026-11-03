@@ -95,3 +95,20 @@ Trajectory 0, evening discharge 18:00–22:00:
   is the first one discharged, so the ratio evaluated at 18:00 already reflects a
   quarter-hour of discharge.  This is what reproduces the manuscript's liquidation
   times; `simulate.evening_discharge` documents it.
+
+## Appendix A — sensitivity to the oracle window (v2.0.1)
+
+`scripts/run_oracle_sweep.py`, 500 trajectories, both leverages, windows 4/8/12/24/48 h,
+shocks 0 / −15 / −30 % at day 3.5. Headline figures at ρ0 = 1.50:
+
+| Window | Liquidated, no shock | −15 % | −30 % | Lag (mean abs. dev. from spot) |
+|---|---|---|---|---|
+| 4 h | 98.2 % | 100 % | 100 % | 5.8 % |
+| 8 h | 97.8 % | 100 % | 100 % | 9.7 % |
+| 12 h | 91.6 % | 100 % | 100 % | 12.2 % |
+| 24 h | 3.0 % | 73.8 % | 100 % | 11.0 % (12.6 % under −30 %) |
+| 48 h | 0.0 % | 55.8 % | 100 % | 11.2 % (14.7 % under −30 %) |
+
+These replace the earlier Section 4.2 statement ("a 12-hour average liquidates eighteen
+times as many positions ... and a 4-hour average half of all positions"), which this code
+does not reproduce; the manuscript now quotes the figures above.
